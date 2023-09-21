@@ -13,11 +13,6 @@ app.use('/api/auth', require('./routes/auth'));
 // app.use('/api/questions', require('./routes/questions'));
 // app.use('/api/search', require('./routes/search'));
 // app.use('/api/moderation', require('./routes/moderation'));
-app.use('*', (req, res) => {
-    res.status(404).json({ err: 'Not found' });
-});
+app.use('*', (req, res) => { res.status(404).json({err : 'Not found'}); });
 
-
-app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
-});
+app.listen(port, () => { console.log(`Server is running on port: ${port}`); });

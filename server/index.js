@@ -8,11 +8,12 @@ connect();
 app.use(cors());
 app.use(express.json());
 
+// app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
-app.use('/api/questions', require('./routes/questions'));
-app.use('/api/users', require('./routes/users'));
-app.use('/api/search', require('./routes/search'));
-app.use('/api/moderation', require('./routes/moderation'));
+// app.use('/api/questions', require('./routes/questions'));
+// app.use('/api/search', require('./routes/search'));
+// app.use('/api/moderation', require('./routes/moderation'));
+
 
 
 app.listen(port, () => {
